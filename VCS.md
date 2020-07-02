@@ -18,6 +18,7 @@
       1. 工作目录自身回退：git restore <file>
       2. 暂存区回退至工作目录：git restore --staged <file>
       3. 本地计算机回退至工作目录
+      4. 测试版本回退至工作目录
 
 
 ## 远程仓库（gitHub）
