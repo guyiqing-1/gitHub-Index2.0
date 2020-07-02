@@ -30,10 +30,25 @@
                - git reset --hard 版本号
    3. 合并
       - git reflog -i HEAD~次数
-
+   4. 差异比较
+      1. 版本间比较：git diff 版本号 版本号
+      2. 工作目录和暂存区比较：git diff HEAD
+      3. 暂存区和最近一次版本比较：git diff --cached
 
 ## 远程仓库（gitHub）
 1. 远程仓库下载至本地计算机
    - 右键git here： `git clone 地址`
 2. 本地计算机上传至远程仓库
    - git push 远程仓库 分支名
+
+3. 分支
+   1. 查看分支：git branch
+   2. 创建新分支：git branch 分支名
+   3. 切换分支：git checkout 分支名
+   4. 创建并切换分支：git checkout -b 分支名
+   5. 删除分支
+      1. 删除本地分支：git checkout -d 分支名
+      2. 删除远程分支：git push -d 主分支 分支名
+4. 分支合并-冲突
+   1. 分支合并时无冲突
+   2. 分支合并时产出冲突
