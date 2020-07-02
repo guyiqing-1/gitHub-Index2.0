@@ -15,9 +15,9 @@
       1. git log：日志
       2. git reflog：历史操作
    2. 回退
-      1. 工作目录自身后退：git restore <file>
-      2. 暂存区后退至工作目录：git restore --staged <file>
-      3. reset：指定后退版本
+      1. 工作目录自身回退：git restore <file>
+      2. 暂存区回退至工作目录：git restore --staged <file>
+      3. reset：指定回退版本
          1. `--hard：本地计算机、暂存区、工作目录`
          2. `--mixed：本地计算机、暂存区`
          3. `--soft：本地计算机`
@@ -84,6 +84,6 @@
    3. 远程仓库重命名：git remote rename  old  new
 
 ## 组织的创建和成员职位的分配
->使用其它git主的远程仓库项目：   
-    1. 通过git主的fork选项，下载至自身的远程仓库。   
+>使用其它git用户的远程仓库项目：   
+    1. 通过git用户的fork选项，下载至自身的远程仓库。   
     2. 从远程仓库下载至本地计算机。   
