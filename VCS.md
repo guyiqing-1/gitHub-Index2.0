@@ -15,6 +15,7 @@
       1. git log：日志
       2. git reflog：历史操作
    2. 回退
+<<<<<<< HEAD
       1. 工作目录自身后退：git restore <file>
       2. 暂存区后退至工作目录：git restore --staged <file>
       3. reset：指定后退版本
@@ -28,6 +29,11 @@
                3. git reset --soft HADE~次数
             2. 回退指定版本：
                - git reset --hard 版本号
+=======
+      1. 工作目录自身回退：git restore <file>
+      2. 暂存区回退至工作目录：git restore --staged <file>
+      3. 本地计算机回退至工作目录
+>>>>>>> 9a2815d863d306bdca173d406a8665bd63147c8b
    3. 合并
       - git reflog -i HEAD~次数
 
