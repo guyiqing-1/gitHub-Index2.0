@@ -32,23 +32,58 @@
       - git reflog -i HEAD~次数
    4. 差异比较
       1. 版本间比较：git diff 版本号 版本号
-      2. 工作目录和暂存区比较：git diff HEAD
+      2. 工作目录和暂存区比较：git diff 
       3. 暂存区和最近一次版本比较：git diff --cached
+      4. 工作目录和最近一次版本比较：git diff HEAD
 
 ## 远程仓库（gitHub）
+
 1. 远程仓库下载至本地计算机
    - 右键git here： `git clone 地址`
 2. 本地计算机上传至远程仓库
    - git push 远程仓库 分支名
+3. 本地文件和远程仓库建立连接：
+   - 步骤
+      1. 远程仓库创建一个新仓库，并复制SSH地址
+      2. 本地文件夹开启终端，输入 git init
+      3. 命令：
+         1. 开启互相链接：git remote add origin SSH地址
+         2. 解决分支冲突：git pull origin master（当远程新仓库有文件时，如md格式文件。才需要解决分支冲突。）
+            >没有分支冲突时，会返回fatal错误。
+         3. 上传至远程仓库：git push origin master
+4. .gitignore文件：指定某些文件不允许上传至远程仓库：/文件名/
 
-3. 分支
+      示例
+      ```
+        /node_module/
+      ```
+
+5. 分支
    1. 查看分支：git branch
-   2. 创建新分支：git branch 分支名
-   3. 切换分支：git checkout 分支名
-   4. 创建并切换分支：git checkout -b 分支名
-   5. 删除分支
-      1. 删除本地分支：git checkout -d 分支名
+   2. 创建新（本地）分支：git branch 分支名
+      >创建新（远程仓库）分支：需要在gitHub页面上创建。
+   3. 切换分支（切换分支前，一定要先保存到本地计算机。否则会污染切换的分支）
+      1. 切换分支：git checkout 分支名
+      2. 创建并切换分支：git checkout -b 分支名
+   4. 删除分支
+      1. 删除本地分支：git branch -d 分支名
       2. 删除远程分支：git push -d 主分支 分支名
-4. 分支合并-冲突
-   1. 分支合并时无冲突
-   2. 分支合并时产出冲突
+6. 分支合并-冲突（把要合并的分支，合并到当前使用的分支中）
+   - git merge 分支名
+      1. 分支合并时产出冲突
+         1. git merge 分支名
+         2. 选择冲突代码
+         3. 将选择的代码，推入本地计算机
+            1. git add .
+            2. git commit -m '描述信息'
+         4. 合并完成。检查当前使用的分支名是否正常即可。
+      2. 分支合并时无冲突
+7. 补充
+   1. 查看远程仓库：git remote –v
+   2. 添加源仓库地址为远程仓库：git remote add  <name>  <remote>
+   3. 远程仓库重命名：git remote rename  old  new
+
+## 组织的创建和成员职位的分配
+>使用其它git主的远程仓库项目：   
+    1. 通过git主的fork选项，下载至自身的远程仓库。   
+    2. 从远程仓库下载至本地计算机。   
