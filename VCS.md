@@ -18,8 +18,12 @@
       1. 工作目录自身回退：git restore <file>
       2. 暂存区回退至工作目录：git restore --staged <file>
       3. 本地计算机回退至工作目录
-      4. 测试版本回退至工作目录
+   3. 合并
+      - git reflog -i HEAD~次数
 
 
 ## 远程仓库（gitHub）
-右键git here： `git clone 地址`
+1. 远程仓库下载至本地计算机
+   - 右键git here： `git clone 地址`
+2. 本地计算机上传至远程仓库
+   - git push 远程仓库 分支名
