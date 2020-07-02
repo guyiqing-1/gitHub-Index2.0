@@ -11,9 +11,29 @@
 2. 暂存区
 3. 本地计算机
 4. 命令
-   1. git log：日志
-   2. git reflog：历史操作
+   1. 操作记录
+      1. git log：日志
+      2. git reflog：历史操作
+   2. 回退
+      1. 工作目录自身后退：git restore <file>
+      2. 暂存区后退至工作目录：git restore --staged <file>
+      3. reset：指定后退版本
+         1. --hard：本地计算机、暂存区、工作目录
+         2. --mixed：本地计算机、暂存区
+         3. --soft：本地计算机
+         4. 命令
+            1. 回退一个或多个版本：
+               1. git reset --soft HADE^
+               2. git reset --soft HADE^^^
+               3. git reset --soft HADE~次数
+            2. 回退指定版本：
+               - git reset --hard 版本号
+   3. 合并
+      - git reflog -i HEAD~次数
 
 
 ## 远程仓库（gitHub）
-右键git here： `git clone 地址`
+1. 远程仓库下载至本地计算机
+   - 右键git here： `git clone 地址`
+2. 本地计算机上传至远程仓库
+   - git push 远程仓库 分支名
