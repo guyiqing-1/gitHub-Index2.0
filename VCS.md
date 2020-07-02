@@ -11,8 +11,13 @@
 2. 暂存区
 3. 本地计算机
 4. 命令
-   1. git log：日志
-   2. git reflog：历史操作
+   1. 操作记录
+      1. git log：日志
+      2. git reflog：历史操作
+   2. 回退
+      1. 工作目录自身回退：git restore <file>
+      2. 暂存区回退至工作目录：git restore --staged <file>
+      3. 本地计算机回退至工作目录
 
 
 ## 远程仓库（gitHub）
