@@ -18,9 +18,9 @@
       1. 工作目录自身后退：git restore <file>
       2. 暂存区后退至工作目录：git restore --staged <file>
       3. reset：指定后退版本
-         1. --hard：本地计算机、暂存区、工作目录
-         2. --mixed：本地计算机、暂存区
-         3. --soft：本地计算机
+         1. `--hard：本地计算机、暂存区、工作目录`
+         2. `--mixed：本地计算机、暂存区`
+         3. `--soft：本地计算机`
          4. 命令
             1. 回退一个或多个版本：
                1. git reset --soft HADE^
@@ -37,6 +37,3 @@
    - 右键git here： `git clone 地址`
 2. 本地计算机上传至远程仓库
    - git push 远程仓库 分支名
-
-计数第一次
-计数第二次
